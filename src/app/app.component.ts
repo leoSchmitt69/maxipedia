@@ -56,9 +56,60 @@ export class AppComponent implements OnInit {
   validateAuthor(): void {
     this.failAttempts ++;
     this.hasAuthorBeenFound = this.authorFormControl.value?.trim().toLowerCase() === this.currentWeeklyInformation.author.toLowerCase();
+
+    if(this.hasAuthorBeenFound) {
+      this.generateFireworks();
+    }
   }
 
   private getCurrentWeeklyInformation(): WeeklyInformation {
     return weeklyInformations[0]; // TODO
   }
+
+  generateFireworks() {
+    const fireworksContainer = document.getElementById('fireworks-container');
+    const colors = ['#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#ffbeef', '#cdb4db', '#ffc8dd', '#ffafcc'];
+  
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+  
+    for (let i = 0; i < 350; i++) {
+      const firework = document.createElement('div');
+  
+      // Style en ligne pour chaque particule
+      firework.style.position = 'absolute';
+      firework.style.width = '10px';
+      firework.style.height = '10px';
+      firework.style.borderRadius = '50%';
+      firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      firework.style.opacity = '0.8';
+      firework.style.left = `${centerX}px`;
+      firework.style.top = `${centerY}px`;
+  
+      // Random direction and distance
+      const angle = Math.random() * 2 * Math.PI;
+      const radius = Math.random() * 2000;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+  
+      // Animation via JavaScript
+      firework.animate([
+        { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+        { transform: `translate(${x}px, ${y}px) scale(0.5)`, opacity: 0 }
+      ], {
+        duration: 3000, // Durée de l'animation (1s)
+        easing: 'ease-out',
+        fill: 'forwards' // Maintenir la dernière étape
+      });
+  
+      // Ajouter la particule au conteneur
+      fireworksContainer!.appendChild(firework);
+  
+      // Supprimer la particule après l'animation
+      setTimeout(() => {
+        firework.remove();
+      }, 3000);
+    }
+  }
+  
 }
