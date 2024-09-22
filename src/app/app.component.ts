@@ -7,13 +7,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input'
 interface WeeklyInformation {
-  anecdote: string;
+  souvenir: string;
   funFact: string;
   author: string;
 }
 
 const weeklyInformations: WeeklyInformation[] = [{
-  anecdote: "Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
+  souvenir: "Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
   funFact: "Est ce que tu savais que bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
   author: "leo"
 }]
@@ -37,7 +37,8 @@ const weeklyInformations: WeeklyInformation[] = [{
 })
 export class AppComponent implements OnInit {
 
-  displayAnecdote = true;
+  displaySouvenir!: boolean;
+  displaySearchAuthor = false;
   currentWeeklyInformation!: WeeklyInformation;
   authorFormControl = new FormControl<string>('');
   hasAuthorBeenFound!: boolean;
@@ -45,6 +46,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
       this.currentWeeklyInformation = this.getCurrentWeeklyInformation();
+
+      setTimeout(() => {
+        this.displaySouvenir = false
+      },2000)
   }
 
   failAttemptsArray(): any[] {

@@ -3,50 +3,64 @@
 <div class="container" *ngIf="currentWeeklyInformation">
   <h1>Bienvenue sur Maxipedia.fr</h1>
   <div class="content-container">
-    <div *ngIf="displayAnecdote; else funFactContainer" class="anecdote-container">
-      <h2>Ton anecdote du jour :</h2>
-      <div class="anecdote-text-container">
-        {{currentWeeklyInformation.anecdote}}
+    <div *ngIf="displaySouvenir === true" class="souvenir-container">
+      <h2>Ton souvenir du jour :</h2>
+      <div class="souvenir-text-container">
+        {{currentWeeklyInformation.souvenir}}
       </div>
-      <button color="primary" mat-raised-button (click)="displayAnecdote = false">
+
+      <button *ngIf="displaySearchAuthor === false" color="primary" mat-flat-button (click)="displaySearchAuthor=true">
+        Deviner qui a écrit le souvenir ! 
+      </button>
+
+      <div *ngIf="displaySearchAuthor" class="search-souvenir-author-container">
+        <div class="search-souvenir-author-input-container">
+          <mat-form-field subscriptSizing="dynamic">
+            <mat-label>Mais qui c'est ?</mat-label>
+            <input matInput [formControl]="authorFormControl" type="text" />
+          </mat-form-field>
+    
+          <button color="primary" mat-flat-button (click)="validateAuthor()">
+            Check !
+          </button>
+        </div>
+    
+        <div class="search-souvenir-author-result-container">
+          <div *ngIf="hasAuthorBeenFound === true" class="found-author-congrat-container">Bien joué !</div>
+          <div *ngIf="hasAuthorBeenFound === false" class="not-found-author-container">
+            <img class="skull-img" src="/skull.png">
+            <ng-container *ngIf="failAttempts && failAttempts >= 2">Encore</ng-container>
+            <ng-container *ngFor="let attempt of failAttemptsArray(); let index = index">
+              <ng-container *ngIf="index > 1"> encore </ng-container>
+            </ng-container>
+            Loupé !
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div *ngIf="displaySouvenir === false"  class="fun-fact-container">
+      <h2>En voilà un fun fact intéressant :</h2>
+      <div class="fun-fact">{{currentWeeklyInformation.funFact}}</div>
+      
+
+      <div class="triangle-container">
+        <div class="triangle-content"></div>
+      </div>
+
+      <button color="primary" mat-raised-button (click)="displaySouvenir = true">
         <mat-icon>favorite</mat-icon> 
-        Clique ici pour découvrir le fun fact
+        Clique ici pour découvrir le souvenir
       </button>
     </div>
-    <ng-template #funFactContainer>
-      <div class="fun-fact-container">
-        <h2>En voilà un fun fact intéressant :</h2>
-        {{currentWeeklyInformation.funFact}}
-      </div>
-    </ng-template>
   </div>
-  <div class="search-anecdote-author-container">
-    <div class="search-anecdote-author-input-container">
-      <mat-form-field subscriptSizing="dynamic">
-        <mat-label>Cherche celle/celui qui a donné cette anecdote</mat-label>
-        <input matInput [formControl]="authorFormControl" type="text" />
-      </mat-form-field>
 
-      <button color="primary" mat-flat-button (click)="validateAuthor()">
-        Check !
-      </button>
-    </div>
-
-    <div class="search-anecdote-author-result-container">
-      <div *ngIf="hasAuthorBeenFound === true" class="found-author-congrat-container">Bien joué !</div>
-      <div *ngIf="hasAuthorBeenFound === false" class="not-found-author-container">
-        <ng-container *ngIf="failAttempts && failAttempts >= 2">Encore</ng-container>
-        <ng-container *ngFor="let attempt of failAttemptsArray(); let index = index">
-          <ng-container *ngIf="index > 1"> encore </ng-container>
-        </ng-container>
-        Loupé !
-      </div>
-    </div>
+  <div class="image-container">
+    <img src="/maxipedia-sofa.png">
   </div>
+  
 </div>
 
 
-<div class="image-container">
-  <img class="desktop" src="/maxipedia-sofa.png">
-  <img class="mobile" src="/maxipedia-mini.png">
-</div>
+
