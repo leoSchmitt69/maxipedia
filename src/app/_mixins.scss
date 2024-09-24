@@ -1,0 +1,40 @@
+@mixin image-desktop {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 180px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+
+    &.mobile {
+      display: none;
+    }
+  }
+}
+
+@mixin image-mobile {
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  img {
+    position: relative;
+    top: 95px;
+    left: 50px;
+    border-radius: 50%;
+    height: 120%;
+    object-fit: contain;
+    object-position: 50% 50%;
+  }
+}

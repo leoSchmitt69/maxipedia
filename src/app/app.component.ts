@@ -5,7 +5,9 @@ import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
+import {MatInputModule} from '@angular/material/input';
+import { datesSaturdays } from './dates';
+
 interface WeeklyInformation {
   souvenir: string;
   funFact: string;
@@ -13,9 +15,9 @@ interface WeeklyInformation {
 }
 
 const weeklyInformations: WeeklyInformation[] = [{
-  souvenir: "Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
-  funFact: "Est ce que tu savais que bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla",
-  author: "leo"
+  souvenir: "Boire une bière au Bombardier et parler de code jusqu'à 1h, des fucking geek quoi !",
+  funFact: "Chez Microsoft dans les années 1990, il y avait une tradition informelle appelée le 'Beer and Code' où les développeurs se réunissaient pour coder tout en buvant de la bière. L’idée était que, dans une ambiance décontractée, les idées créatives pouvaient mieux émerger. C'était un moyen de rendre le travail intense de développement plus agréable, en particulier pendant les longues sessions de codage pour finaliser des projets avant les deadlines. Cette pratique s’est répandue dans de nombreux autres départements technologiques, créant une sorte de culture où bière et code allaient souvent de pair. Cependant, bien que cela ait parfois stimulé la créativité et l’esprit d’équipe, c’était aussi parfois la recette pour des bugs inattendus !",
+  author: "leo",
 }]
 
 @Component({
@@ -49,7 +51,7 @@ export class AppComponent implements OnInit {
 
       setTimeout(() => {
         this.displaySouvenir = false
-      },2000)
+      },1000)
   }
 
   failAttemptsArray(): any[] {
@@ -68,7 +70,16 @@ export class AppComponent implements OnInit {
   }
 
   private getCurrentWeeklyInformation(): WeeklyInformation {
-    return weeklyInformations[0]; // TODO
+    let index = datesSaturdays.findIndex((saturdayDate: string, index: number) => {
+      const previousSaturday = new Date(saturdayDate);
+      const nextSaturday = new Date(datesSaturdays[index+1]);
+      const today = new Date();
+      return today >= previousSaturday && today < nextSaturday
+      })
+
+    index = index === -1 ? 0 : index
+
+    return weeklyInformations[index];
   }
 
   generateFireworks() {

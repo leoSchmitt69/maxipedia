@@ -1,32 +1,34 @@
 <div class="fireworks-container" id="fireworks-container"></div>
 
 <div class="container" *ngIf="currentWeeklyInformation">
-  <h1>Bienvenue sur Maxipedia.fr</h1>
+  <h1>M&#64;xipedia</h1>
   <div class="content-container">
-    <div *ngIf="displaySouvenir === true" class="souvenir-container">
-      <h2>Ton souvenir du jour :</h2>
-      <div class="souvenir-text-container">
+    <div *ngIf="displaySouvenir === true" class="interaction-container">
+      <div class="text-container">
         {{currentWeeklyInformation.souvenir}}
       </div>
 
-      <button *ngIf="displaySearchAuthor === false" color="primary" mat-flat-button (click)="displaySearchAuthor=true">
-        Deviner qui a écrit le souvenir ! 
+      <button *ngIf="displaySearchAuthor === false" mat-fab extended (click)="displaySearchAuthor=true">
+        MAIS QUI EST-CE ? 🧐
       </button>
 
       <div *ngIf="displaySearchAuthor" class="search-souvenir-author-container">
         <div class="search-souvenir-author-input-container">
           <mat-form-field subscriptSizing="dynamic">
-            <mat-label>Mais qui c'est ?</mat-label>
+            <mat-label>🤷‍♂️</mat-label>
             <input matInput [formControl]="authorFormControl" type="text" />
           </mat-form-field>
     
-          <button color="primary" mat-flat-button (click)="validateAuthor()">
-            Check !
+          <button mat-fab extended (click)="validateAuthor()">
+            VERDICT ...
           </button>
         </div>
     
         <div class="search-souvenir-author-result-container">
-          <div *ngIf="hasAuthorBeenFound === true" class="found-author-congrat-container">Bien joué !</div>
+          <div *ngIf="hasAuthorBeenFound === true" class="found-author-congrat-container">
+            <div>Bien joué !</div>
+            <div>À la semaine prochaine ✌️</div>
+          </div>
           <div *ngIf="hasAuthorBeenFound === false" class="not-found-author-container">
             <img class="skull-img" src="/skull.png">
             <ng-container *ngIf="failAttempts && failAttempts >= 2">Encore</ng-container>
@@ -40,18 +42,17 @@
       
     </div>
 
-    <div *ngIf="displaySouvenir === false"  class="fun-fact-container">
-      <h2>En voilà un fun fact intéressant :</h2>
-      <div class="fun-fact">{{currentWeeklyInformation.funFact}}</div>
+    <div *ngIf="displaySouvenir === false"  class="interaction-container with-arrow">
+      <h2>Fun fact de la semaine 🤓</h2>
+      <div class="text-container">{{currentWeeklyInformation.funFact}}</div>
       
 
       <div class="triangle-container">
         <div class="triangle-content"></div>
       </div>
 
-      <button color="primary" mat-raised-button (click)="displaySouvenir = true">
-        <mat-icon>favorite</mat-icon> 
-        Clique ici pour découvrir le souvenir
+      <button color="primary" mat-fab extended (click)="displaySouvenir = true">
+        À QUEL SOUVENIR EST-IL RELIÉ ? ❤️
       </button>
     </div>
   </div>
@@ -64,3 +65,12 @@
 
 
 
+<!--
+
+<div class="heart-container">
+    <div class="heart">
+        <div class="heart-text">Your Text Here</div>
+    </div>
+</div>
+
+-->
