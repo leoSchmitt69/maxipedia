@@ -157,7 +157,7 @@ export class AppComponent implements OnInit {
         { transform: 'translate(0, 0) scale(1)', opacity: 1 },
         { transform: `translate(${x}px, ${y}px) scale(0.5)`, opacity: 0 }
       ], {
-        duration: 3000, // Durée de l'animation (1s)
+        duration: 8000, // Durée de l'animation (1s)
         easing: 'ease-out',
         fill: 'forwards' // Maintenir la dernière étape
       });
@@ -168,7 +168,7 @@ export class AppComponent implements OnInit {
       // Supprimer la particule après l'animation
       setTimeout(() => {
         firework.remove();
-      }, 3000);
+      }, 5000);
     }
   }
   
