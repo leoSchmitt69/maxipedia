@@ -7,18 +7,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { datesSaturdays } from './dates';
+import { WeeklyInformation, weeklyInformations } from './weekly-informations';
 
-interface WeeklyInformation {
-  souvenir: string;
-  funFact: string;
-  author: string;
-}
 
-const weeklyInformations: WeeklyInformation[] = [{
-  souvenir: "Boire une bière au Bombardier et parler de code jusqu'à 1h, des fucking geek quoi !",
-  funFact: "Chez Microsoft dans les années 1990, il y avait une tradition informelle appelée le 'Beer and Code' où les développeurs se réunissaient pour coder tout en buvant de la bière. L’idée était que, dans une ambiance décontractée, les idées créatives pouvaient mieux émerger. C'était un moyen de rendre le travail intense de développement plus agréable, en particulier pendant les longues sessions de codage pour finaliser des projets avant les deadlines. Cette pratique s’est répandue dans de nombreux autres départements technologiques, créant une sorte de culture où bière et code allaient souvent de pair. Cependant, bien que cela ait parfois stimulé la créativité et l’esprit d’équipe, c’était aussi parfois la recette pour des bugs inattendus !",
-  author: "leo",
-}]
+
+
 
 @Component({
   selector: 'app-root',
@@ -61,11 +54,13 @@ export class AppComponent implements OnInit {
   }
 
   validateAuthor(): void {
-    this.failAttempts ++;
+    
     this.hasAuthorBeenFound = this.authorFormControl.value?.trim().toLowerCase() === this.currentWeeklyInformation.author.toLowerCase();
 
     if(this.hasAuthorBeenFound) {
       this.generateFireworks();
+    } else {
+      this.failAttempts ++;
     }
   }
 
@@ -113,7 +108,7 @@ export class AppComponent implements OnInit {
         { transform: 'translate(0, 0) scale(1)', opacity: 1 },
         { transform: `translate(${x}px, ${y}px) scale(0.5)`, opacity: 0 }
       ], {
-        duration: 3000, // Durée de l'animation (1s)
+        duration: 8000, // Durée de l'animation (1s)
         easing: 'ease-out',
         fill: 'forwards' // Maintenir la dernière étape
       });
@@ -124,7 +119,7 @@ export class AppComponent implements OnInit {
       // Supprimer la particule après l'animation
       setTimeout(() => {
         firework.remove();
-      }, 3000);
+      }, 5000);
     }
   }
 

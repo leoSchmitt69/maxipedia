@@ -5,7 +5,7 @@
   <div class="content-container">
     <div *ngIf="displaySouvenir === true" class="interaction-container">
       <div class="text-container">
-        {{currentWeeklyInformation.souvenir}}
+        "{{currentWeeklyInformation.souvenir}}"
       </div>
 
       <button *ngIf="displaySearchAuthor === false" mat-fab extended (click)="displaySearchAuthor=true">
