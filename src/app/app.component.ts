@@ -127,5 +127,49 @@ export class AppComponent implements OnInit {
       }, 3000);
     }
   }
+
+  generateHearts() {
+    const fireworksContainer = document.getElementById('fireworks-container');
+  
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+  
+    for (let i = 0; i < 350; i++) {
+      const firework = document.createElement('div');
+  
+      // Style en ligne pour chaque particule
+      firework.style.position = 'absolute';
+      firework.style.width = '10px';
+      firework.style.height = '10px';
+      firework.style.opacity = Math.random().toString();
+      firework.style.left = `${centerX}px`;
+      firework.style.top = `${centerY}px`;
+      firework.innerHTML = '&#10084;'
+  
+      // Random direction and distance
+      const angle = Math.random() * 2 * Math.PI;
+      const radius = Math.random() * 2000;
+      const x = Math.cos(angle) * radius;
+      const y = Math.sin(angle) * radius;
+  
+      // Animation via JavaScript
+      firework.animate([
+        { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+        { transform: `translate(${x}px, ${y}px) scale(0.5)`, opacity: 0 }
+      ], {
+        duration: 3000, // Durée de l'animation (1s)
+        easing: 'ease-out',
+        fill: 'forwards' // Maintenir la dernière étape
+      });
+  
+      // Ajouter la particule au conteneur
+      fireworksContainer!.appendChild(firework);
+  
+      // Supprimer la particule après l'animation
+      setTimeout(() => {
+        firework.remove();
+      }, 3000);
+    }
+  }
   
 }
