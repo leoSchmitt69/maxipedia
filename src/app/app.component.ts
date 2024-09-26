@@ -1,17 +1,14 @@
 import { NgFor, NgForOf, NgIf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { datesSaturdays } from './dates';
 import { WeeklyInformation, weeklyInformations } from './weekly-informations';
-
-
-
-
 
 @Component({
   selector: 'app-root',
@@ -25,19 +22,23 @@ import { WeeklyInformation, weeklyInformations } from './weekly-informations';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
 
+  private _snackBar = inject(MatSnackBar);
+  
   displaySouvenir!: boolean;
   displaySearchAuthor = false;
   currentWeeklyInformation!: WeeklyInformation;
   authorFormControl = new FormControl<string>('');
   hasAuthorBeenFound!: boolean;
   failAttempts = 0;
+  easterEggDragon = false;
 
   ngOnInit(): void {
       this.currentWeeklyInformation = this.getCurrentWeeklyInformation();
@@ -59,6 +60,9 @@ export class AppComponent implements OnInit {
 
     if(this.hasAuthorBeenFound) {
       this.generateFireworks();
+    } else if(this.authorFormControl.value?.trim().toLowerCase().includes('dragon')) {
+      this.foundEasterEgg();
+      this.showDragon();
     } else {
       this.failAttempts ++;
     }
@@ -75,6 +79,14 @@ export class AppComponent implements OnInit {
     index = index === -1 ? 0 : index
 
     return weeklyInformations[index];
+  }
+
+  foundEasterEgg() {
+    this._snackBar.open("Bien joué ! Tu as trouvé un Easter Egg !");
+  }
+
+  showDragon() {
+    this.easterEggDragon = true;
   }
 
   generateFireworks() {

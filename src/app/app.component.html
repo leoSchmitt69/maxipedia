@@ -1,13 +1,12 @@
 <div class="fireworks-container" id="fireworks-container"></div>
 
 <div class="container" *ngIf="currentWeeklyInformation">
-  <h1>M&#64;xipedia</h1>
+  <h1 class="title-maxipedia">M&#64;xipedia</h1>
   <div class="content-container">
     <div *ngIf="displaySouvenir === true" class="interaction-container">
       <div class="text-container">
         "{{currentWeeklyInformation.souvenir}}"
       </div>
-      test
       <button *ngIf="displaySearchAuthor === false" mat-fab extended (click)="displaySearchAuthor=true">
         MAIS QUI EST-CE ? 🧐 
       </button>
@@ -58,7 +57,9 @@
   </div>
 
   <div class="image-container">
-    <img src="/maxipedia-sofa.png">
+    <img *ngIf="!easterEggDragon && !displaySouvenir" src="/maxipedia-sofa.png">
+    <img *ngIf="!easterEggDragon && displaySouvenir" [src]="currentWeeklyInformation?.image ? currentWeeklyInformation.image : '/maxipedia-souriant.png'">
+    <img *ngIf="easterEggDragon" src="/max-the-dragon.png">
   </div>
   
 </div>
