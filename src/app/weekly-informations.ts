@@ -19,7 +19,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Journée de maboule à découvrir Giverny, les jardins de Monet, et ses alentours !",
       funFact: "Savais-tu que Claude Monet, proue de l’impressionnisme, avait fini sa vie et sa carrière malvoyant? Atteint d’une double cataracte, il perd peu à peu la vue et sa perception des couleurs se déforme.",
-      author: ["Agathe"]
+      author: ["Agathe", "Gagy"]
     },
     {
       souvenir: "Nous qui pensions que le chien de traîneau c'était juste poser ses petites fesses sur un traîneau et se laisser porter. Quelle fut notre surprise quand nous nous sommes rendus compte que c'était en fait… sportif. A toi Max, perdu dans les sapins tirés par tes 3 chiens. A toi Max, qui t’es fait engueuler comme un enfant par le guide.",
