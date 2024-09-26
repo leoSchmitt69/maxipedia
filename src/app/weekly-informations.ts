@@ -15,7 +15,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Boire une bière au Bombardier et parler de code jusqu'à 1h, des fucking geek quoi !",
       funFact: "Chez Microsoft dans les années 1990, il y avait une tradition appelée 'Beer and Code' où les développeurs se réunissaient pour coder tout en buvant de la bière, stimulant ainsi la créativité.",
-      author: ["Léo", "Le rigolo"]
+      author: ["Léo","Leo", "Le rigolo"]
     },
     {
       souvenir: "Journée de maboule à découvrir Giverny, les jardins de Monet, et ses alentours !",
@@ -30,7 +30,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "À la génance de la Kékette quand tu as dû rester avec les parents de Thomas pendant que je fuyais dans la cuisine…",
       funFact: "La Chine est le pays produisant le plus de bière au monde. En termes de volume de production, la Chine se positionne comme leader du classement mondial. Elle devance ainsi les Etats-Unis et le Brésil. En 2021, 360 millions d'hectolitres de bière y ont été brassés. La bière la plus vendue au monde est chinoise : La Snow.",
-      author: ["Noémie"]
+      author: ["Noémie", "Noemie"]
     },
     {
       souvenir: "Notre premier voyage tous les 2, à Londres ✨ Soirée dans un pub Irlandais à boire du cidre en jouant à “Quel serait ton super pouvoir bidon ?“",
@@ -40,7 +40,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Ca c'est un gros cornichon",
       funFact: "Il existait une loi dans l'État du Connecticut qui stipulait qu'un cornichon ne pouvait être vendu que s'il rebondissait lorsqu'on le laissait tomber.",
-      author: ["Léo"]
+      author: ["Léo","Leo", "Le rigolo"]
     },
     {
       souvenir: "Pendant le 1er confinement, on a fait la teuf avant la fin du confinement au 86 pour l’anniversaire de Léo, et globalement on a bien fraudé pour rejoindre la colove et le 86.",
@@ -70,7 +70,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Eté 2015, mouans Sartoux.\nJ'ai beaucoup aimé rencontrer ta famille et aider surtout toi et ton père à faire des travaux dans le cabinet de ta mère. Un sacré moment où toi et ton père vous vous embrouillez sur comment découper une planche de BA13 JUSQU’AU moment où tu quittes excédé le local pour aller faire un tour dehors … et je me retrouve en tête à tête avec ton père.",
       funFact: "Si l’utilisation du plâtre dans la construction n’est pas nouvelle, c'est en 1894 aux États-Unis qu'est inventé le concept de la plaque de plâtre (plasterboard). La technique de la plaque de plâtre a été apportée en France à la sortie de la Seconde Guerre mondiale par la société Placoplatre (filiale du groupe Saint-Gobain), créée à cette fin par les sociétés Plâtres Lambert, SAMC, Plâtrières de Crozon et Garandeau, au moment de la reconstruction.",
-      author: ["Nicolas Kuhn"],
+      author: ["Nicolas", "Kuhn"],
     },
     {
       souvenir: "Notre belle chanson '3A relous' sur les airs de 'cette année là' de Claude François",
@@ -100,7 +100,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Des petits pois explosifs ! Niveau 1 en cuisine à l’époque, la cuisine de Max n’en a pas réchappé. Une boîte de petits pois peut faire un magnifique geyser quand elle accumule trop de vapeur.",
       funFact: "Les petits pois sont des héros de l'histoire de la génétique ! C'est grâce à eux que Gregor Mendel a découvert les principes de l'hérédité.",
-      author: ["Noémie"]
+      author: ["Noémie", "Noemie"]
     },
     {
       souvenir: "Au ski 2022, lorsque Blazy, toi et moi étions dans la même chambre, surnommée la chambre des ronfleurs.",
@@ -130,7 +130,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "En 3A, quand on s'est fait passer pour des NAs durant l'intégration et qu'on a réussi à faire croire à un NA que nous étions aussi des nouveaux. Nous avons failli être démasqués quand il nous a demandé comment cela se faisait que l’on débarquait tous les 2 exactement le même jour après 1 semaine d’intégration. Grace à une magnifique pirouette 360° on a réussi à lui faire croire qu'on venait d'arriver car on était encore sur liste d'attente.",
       funFact: "\"Bamboozle\" est un mot qui signifie \"tromper par des méthodes sournoises\" et \"embrouiller, frustrer ou déstabiliser complètement.\" Il est devenu un terme d'argot populaire sur le subreddit /r/me_irl fin 2016 dans des publications demandant des upvotes.",
-      author: ["Nicolas Kuhn"],
+      author: ["Nicolas", "Kuhn"],
     },
     {
       author: ["Fabien"],
@@ -180,27 +180,27 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Une matinée de dingue au Tekniska Museet, meilleur musée de Suède voir du monde, un moment intense de joie, d’émerveillement et de surprises !",
       funFact: "En 1862, la Suède fut le premier pays à accorder le suffrage aux femmes (mariées), bien que seulement pour les élections municipales.",
-      author: ["Thomas D"],
+      author: ["Thomas"],
     },
     {
       souvenir: "La soirée du Turfu dans nos deux chambres à la Meuh avec Chloé, un grand souvenir d’improvisation, de motivation et de volonté de faire la fête alors qu’absolument rien ne s’y prêtait. Je pense que même Alain était trop surpris pour nous engueuler face au caractère absolument inopiné de cette nuit endiablée !",
       funFact: "Le saviez vous ? Avec 1 250 mètres réservés aux piétons, la rue Sainte Catherine à Bordeaux est la plus longue rue piétonne de toute la France et même d’Europe. Avec plus de 200 magasins, elle est aussi l’une des plus grandes artères commerçantes du monde. Autant dire que cette rue est bondée le samedi après-midi…",
-      author: ["Thomas D"],
+      author: ["Thomas"],
     },
     {
       souvenir: "Soirée shooting improvisé le long du Regent Canal à Camden Town pour mettre à jour ma photo de profil de Tinder. L’histoire retiendra que le succès de ces clichés ne fut pas au rendez-vous.",
       funFact: "Le nom du canal, de Regent's Park et de Regent Street renvoie à George, prince-régent (plus tard George IV 1762-1830), connu pour sa gourmandise excessive qui nuira fortement à sa santé.",
-      author: ["Nicolas Kuhn"],
+      author: ["Nicolas","Kuhn"],
     },
     {
       souvenir: "Les heures, les aprèms, les journées à jouer aux Sims 2 parce que papa Marco avait réussi à cracker tous les addons, jusqu’à la Skoda Octavia de mon père de l’époque ! Un vrai bonheur !",
       funFact: "La partie drôle, c’est que Les Sims 2 introduit la faucheuse, qui vient récupérer l’âme du Sim après sa noyade. Mais ce n’est pas tout : si le Sim avait un niveau de relation élevé avec un autre Sim, ce dernier pouvait supplier la Faucheuse de lui accorder une seconde chance.",
-      author: ["Maxime Evrard"],
+      author: ["Maxime", "Evrard"],
     },
     {
       souvenir: "Eté 2015, vacances prévues à Mouans Sartoux.\nNK : “Allo Max, c’est tout bon, je suis dans le TGV direction Mouans Sartoux.”\nMax : “Euh, ah ouais, comment ça ? C’est demain normalement le rendez-vous”\nNK : “Ah …”",
       funFact: "Le saviez-vous ? Selon une étude menée par Paul Frankland et Blake Richards de l’université de Toronto, la mémoire ne stocke pas toutes les informations qui nous arrivent, mais doit faire une sélection et garder uniquement ce qu'elle considère important. Alors qu’il était perçu que la mémoire stockait toutes les informations reçues sans faire de tri a priori, cette étude prouve que la mémoire est dynamique et réalise un travail de tri en amont du stockage. Les personnes têtes en l'air ou distraites seraient, ainsi, plus intelligentes car leur cerveau va au-delà des questions sans importance pour se consacrer au plus pertinentes, et ce sont celles-ci qu'il va finalement stocker.",
-      author: ["Nicolas Kuhn"],
+      author: ["Nicolas", "Kuhn"],
     },
     {
       souvenir: "En soirée chez une amie, j’étais seul au bord de la piscine, savourant le calme. Max débarque, furieux, et explose une chaise longue d’un coup de pied… qu'il regrette aussitôt.",
@@ -210,17 +210,17 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Des journées et des soirées entières à poncer Borderlands 3 avec Flo et Fab durant le premier confinement. Et le défi Takedown Maliwan avec le boss Wotan qui nous a fait galérer comme jamais.",
       funFact: "Maliwan est un fabricant d'équipements de Pandore, réputé pour sa technologie élémentale. Toutes les armes fabriquées par ce fabricant possèdent obligatoirement un ou plusieurs effets élémentaux, au détriment parfois, des autres caractéristiques. Seuls les 4 effets élémentaux incendiaire, électrique, corrosif et slag sont disponibles, jamais l'effet explosif. De manière générale aussi, les armes Maliwan possèdent une probabilité (chance) plus élevée de produire des effets élémentaux sur la durée. La vitesse des projectiles est aussi généralement plus faible que pour les armes des autres fabricants, hormis Torgue. Au niveau esthétique, les armes Maliwan affichent souvent un look « futuriste », avec des angles arrondis, des couleurs claires et vives, ainsi que des loupiotes qui clignotent un peu partout sur l'arme.",
-      author: ["Nicolas Kuhn"]
+      author: ["Nicolas", "Kuhn"]
     },
     {
       souvenir: "En soirée dans ta chambre à la Meuh, avec ton frère, on s’est mis à discuter du résultat de la somme des entiers naturels (le fameux -1/12). La discussion full troll a été plus passionnée qu’elle n’aurait dû être.",
       funFact: "La première démonstration de ce résultat vient du mathématicien indien Srinivasa Ramanujan. Il s’agit d’un cas particulier de sommation de Ramanujan, technique qu’il a développée pour donner une valeur aux séries infinies divergentes. Ces résultats et certaines démonstrations sont explicités dans les fameux “cahiers de Ramanujan”, où il note la totalité des résultats qu’il découvre à partir de 1908. Faute de papier par pauvreté matérielle, il effectue ses calculs et ses raisonnements de tête ou sur une ardoise, ne notant que les résultats définitifs sur un cahier ; il conservera cette méthode de travail toute sa vie, produisant ainsi trois cahiers contenant au total 3 900 formules et théorèmes sans pratiquement aucune démonstration ; de plus, son isolement l'amène à se construire un système de notation personnel, rendant difficilement déchiffrable son travail. Le dernier cahier dit “cahier perdu de Ramanujan” n’a été redécouvert qu’en 1976. Il ne s’agit que d’une liasse de feuillets en désordre, écrits durant la dernière année de sa vie (1919-1920), contenant plus de 600 formules. Tous les résultats présentés dans ces cahiers ont été analysés et sont désormais tous démontrés (parfois à l'aide d'outils informatiques) : très peu sont faux (le plus souvent à la suite d'erreurs de copie) et les deux tiers sont originaux. Ramanujan ne disposant pas de certaines théories inconnues ou en cours de développement au début du XXème siècle, et ignorant même des résultats fondamentaux de l’analyse complexe, les méthodes qui lui ont permis de découvrir une telle quantité de formules et de théorèmes restent obscures.",
-      author: ["Thomas B"]
+      author: ["Thomas"]
     },
     {
       souvenir: "Les sessions saunas à poil en Suède suivi du plouf dans le lac à 5°C. Et ensuite on est KO pour le reste de la journée.",
       funFact: "Pourquoi est-on fatigué après une séance de sauna ? La chaleur peut entraîner une dilatation des vaisseaux sanguins, ce qui peut entraîner une diminution de la pression artérielle et une réduction du flux sanguin vers le cerveau. Cette réaction physiologique peut causer une sensation de somnolence et de fatigue.",
-      author: ["Nicolas Kuhn"]
+      author: ["Nicolas", "Kuhn"]
     },
     {
       souvenir: "Ce week-end plein d’intensité à la célèbre et renommée “La Palombiere” à Aspermount, on avait expérimenté des recettes quelque peu originales telles que les wraps coquillettes sauce samouraï (sisi, un vrai délice !)... et ce joli présent de Baya que nous n’avons pas enlevé avant le lendemain matin : mon nez s’en rappelle encore !",
@@ -230,7 +230,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Big up à nos escapades à Fontainebleau ! (& notre motivation de trentenaire à prendre les trains de 8h30 un samedi à Gare du Nord)",
       funFact: "En 1861, Napoléon III a fait de Fontainebleau le premier site naturel protégé au monde ! Il a décrété qu'une partie de la forêt devait être préservée pour sa beauté naturelle, créant ainsi une réserve artistique pour les peintres, sculpteurs et amoureux de la nature. Cela a même précédé la création des premiers parcs nationaux en Amérique du Nord.",
-      author: ["Agathe"]
+      author: ["Agathe", "gagy"]
     },
     {
       souvenir: "La fois où nous avions fait soirée à Mouans Sartoux et où j’avais ramené “computor”... je crois qu’elle n’avait pas bien compris l’issu du jeu de la cuillère en bois : ça a été plus de 15 belles minutes de bonheur pour nous les spectateurs.",
@@ -245,12 +245,12 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "L’échange avec les italiens en 4e qui a été source de fous-rires et de frayeurs. Je sais déjà que tu te rappelles de “Radio Subasio” que tu as de nouveau écouté pour ton plus grand plaisir il y a peu.",
       funFact: "Potenza Picena tire son nom de l’ancienne Potentia, une florissante colonie romaine dont les premières informations remontent à 184 av. J.-C.",
-      author: ["Maxime Evrard"],
+      author: ["Maxime", "Evrard"],
     },
     {
       souvenir: "A notre nouveau QG le restaurant des 5, best rendez-vous hebdo ! Hâte que Léo n'ait plus son doigt cassé pour reprendre notre routine !!!",
       funFact: "Se retrouver régulièrement avec ses amis stimule la production d'une hormone appelée ocytocine, surnommée l'hormone du bonheur ou de l'attachement. Quand on passe du temps de qualité avec des personnes qu'on apprécie, cette hormone est libérée, ce qui renforce les liens affectifs et crée un sentiment de bien-être.",
-      author: ["Agathe"]
+      author: ["Agathe", "gagy"]
     },
     {
       souvenir: "À ces belles sessions de limbo en plein milieu de la route de Mouans Sartoux…",
@@ -260,7 +260,7 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "La maxi galère quand la roue de ton vélo a crevé et que tu as touuut donné pour la réparer en vain (et que je t'ai proposé de te prêter le mien !) avant que notre doux ami Benoit arrive à la rescousse.",
       funFact: "Saviez-vous que la première pneu de vélo a été inventé par John Boyd Dunlop en 1887 pour permettre à son fils d'avoir une meilleure expérience de vélo, sans les chocs des roues en fer qui étaient alors standard ? Cela a révolutionné le monde du cyclisme et a contribué à rendre le vélo plus populaire.",
-      author: ["Agathe"]
+      author: ["Agathe", "gagy"]
     }
   ];
   
