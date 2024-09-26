@@ -56,7 +56,9 @@ export class AppComponent implements OnInit {
 
   validateAuthor(): void {
     
-    this.hasAuthorBeenFound = this.authorFormControl.value?.trim().toLowerCase() === this.currentWeeklyInformation.author.toLowerCase();
+    const reponse = this.authorFormControl?.value ? this.authorFormControl.value.trim().toLowerCase() : '';
+    const authors = this.currentWeeklyInformation.author.map(name => name.toLowerCase());
+    this.hasAuthorBeenFound = authors.includes(reponse);
 
     if(this.hasAuthorBeenFound) {
       this.generateFireworks();
