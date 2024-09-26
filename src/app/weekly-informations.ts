@@ -2,6 +2,7 @@ export interface WeeklyInformation {
     souvenir: string;
     funFact: string;
     author: string;
+    image?: string;
   }
 
 export  const weeklyInformations: WeeklyInformation[] = [
