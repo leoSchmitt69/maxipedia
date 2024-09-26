@@ -9,10 +9,6 @@ import {MatInputModule} from '@angular/material/input';
 import { datesSaturdays } from './dates';
 import { WeeklyInformation, weeklyInformations } from './weekly-informations';
 
-
-
-
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -49,7 +45,7 @@ export class AppComponent implements OnInit {
 
   failAttemptsArray(): any[] {
     const arr = new Array(this.failAttempts || 0)
-    console.log(arr)
+    
     return arr;
   }
 
