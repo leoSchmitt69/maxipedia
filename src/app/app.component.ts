@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
   hasAuthorBeenFound!: boolean;
   failAttempts = 0;
   easterEggDragon = false;
+  headClicks = 0;
 
   ngOnInit(): void {
       this.currentWeeklyInformation = this.getCurrentWeeklyInformation();
@@ -53,6 +54,16 @@ export class AppComponent implements OnInit {
     
     return arr;
   }
+
+  headClicked(): void {
+    console.log("erwan, do something !");
+
+    this.headClicks++;
+    if(this.headClicks > 5){
+      this._snackBar.open("Calme toi ! T'as la clickonite ou quoi ? 🤪🤪🤪", undefined, {duration: 5000, panelClass: "snackbar"});
+    }
+  }
+
 
   validateAuthor(): void {
     
@@ -84,7 +95,7 @@ export class AppComponent implements OnInit {
   }
 
   foundEasterEgg() {
-    this._snackBar.open("Bien joué ! Tu as trouvé un Easter Egg !");
+    this._snackBar.open("Bien joué ! Tu as trouvé un Easter Egg !", undefined, {duration: 5000,}); // On code sale, on variabilise R !
   }
 
   showDragon() {
