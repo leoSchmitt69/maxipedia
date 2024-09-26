@@ -9,7 +9,8 @@ export  const weeklyInformations: WeeklyInformation[] = [
     {
       souvenir: "Maxou est né à 23h le 13 juillet, en plein feu d'artifice. Il a failli s'appeler 'fête nat.' 😁",
       funFact: "Savais tu que Franck Ribéry est devenu papa d’un petit garçon le 14 juillet 2015 et qu'il l'a appelé FetNat ? Il explique dans une interview donnée à Enfants et Bébés Mag’: 'Wahiba ne m’a rien dit pour ce nouvel enfant. Moins de deux mois après la naissance d’un petit bébé, c’est rare d’en avoir un autre. Je n’avais rien préparé, alors j’ai fait comme beaucoup de gens, j’ai pris le calendrier, j’ai repéré la date, j’ai pris mon doigt pour suivre la ligne, et j’ai trouvé le prénom de mon nouveau fils : Fetnat.'",
-      author: "Christel"
+      author: "Christel",
+      image: "max-fet-nat.png"
     },
     {
       souvenir: "Boire une bière au Bombardier et parler de code jusqu'à 1h, des fucking geek quoi !",
