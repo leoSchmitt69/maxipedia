@@ -58,7 +58,7 @@
 
   <div class="image-container">
     <img *ngIf="!easterEggDragon && !displaySouvenir" src="/maxipedia-sofa.png">
-    <img *ngIf="!easterEggDragon && displaySouvenir" [src]="currentWeeklyInformation?.image ? currentWeeklyInformation.image : '/maxipedia-souriant.png'">
+    <img *ngIf="!easterEggDragon && displaySouvenir" [src]="currentWeeklyInformation.image ? currentWeeklyInformation.image : '/maxipedia-souriant.png'">
     <img *ngIf="easterEggDragon" src="/max-the-dragon.png">
   </div>
   
