@@ -7,7 +7,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
-import { datesSaturdays } from './dates';
+import { datesWednesdays } from './dates';
 import { WeeklyInformation, weeklyInformations } from './weekly-informations';
 
 @Component({
@@ -86,11 +86,11 @@ export class AppComponent implements OnInit {
   }
 
   private getCurrentWeeklyInformation(): WeeklyInformation {
-    let index = datesSaturdays.findIndex((saturdayDate: string, index: number) => {
-      const previousSaturday = new Date(saturdayDate);
-      const nextSaturday = new Date(datesSaturdays[index+1]);
+    let index = datesWednesdays.findIndex((wednesdayDate: string, index: number) => {
+      const previousWednesday = new Date(wednesdayDate);
+      const nextWednesday = new Date(datesWednesdays[index+1]);
       const today = new Date();
-      return today >= previousSaturday && today < nextSaturday
+      return today >= previousWednesday && today < nextWednesday
       })
 
     index = index === -1 ? 0 : index
