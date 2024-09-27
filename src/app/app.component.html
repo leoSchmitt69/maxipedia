@@ -1,5 +1,7 @@
 <div class="fireworks-container" id="fireworks-container"></div>
 
+<div class="head-mask" (click)="headClicked()"></div>
+
 <div class="container" *ngIf="currentWeeklyInformation">
   <h1 class="title-maxipedia">M&#64;xipedia</h1>
   <div class="content-container">
@@ -57,9 +59,8 @@
   </div>
 
   <div class="image-container">
-    <img *ngIf="!easterEggDragon && !displaySouvenir" src="/maxipedia-sofa.png">
-    <img *ngIf="!easterEggDragon && displaySouvenir" [src]="currentWeeklyInformation.image ? currentWeeklyInformation.image : '/maxipedia-souriant.png'">
-    <img *ngIf="easterEggDragon" src="/max-the-dragon.png">
+    <img *ngIf="!displaySouvenir" [src]="presentationImage">
+    <img *ngIf="displaySouvenir" [src]="souvenirImage">
   </div>
   
 </div>

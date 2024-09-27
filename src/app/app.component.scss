@@ -157,6 +157,24 @@
 
 // MODE MOBILE
 @media (max-width: 768px) {
+  .head-mask {
+    z-index: 6;
+    position: absolute;
+    bottom: 12%;
+    right: 13%;
+    width: 24%;
+    height: 14%;
+    // POUR VOIR LA ZONE :
+    /*background: rgba(
+      255,
+      0,
+      0,
+      0.5
+    ); */
+    border-radius: 50%; /* Arrondir la zone pour qu'elle ressemble à une tête */
+    //cursor: pointer;
+  }
+
   .container {
     .content-container {
       width: 100%;
