@@ -38,12 +38,13 @@ export class AppComponent implements OnInit {
   authorFormControl = new FormControl<string>('');
   hasAuthorBeenFound!: boolean;
   failAttempts = 0;
-  easterEggDragon = false;
   headClicks = 0;
+  souvenirImage = '/maxipedia-souriant.png';
+  presentationImage = '/maxipedia-sofa.png';
 
   ngOnInit(): void {
       this.currentWeeklyInformation = this.getCurrentWeeklyInformation();
-
+      this.souvenirImage = this.currentWeeklyInformation.image ? this.currentWeeklyInformation.image : '/maxipedia-souriant.png';
       setTimeout(() => {
         this.displaySouvenir = false
       },1000)
@@ -56,11 +57,14 @@ export class AppComponent implements OnInit {
   }
 
   headClicked(): void {
-    console.log("erwan, do something !");
-
-    this.headClicks++;
-    if(this.headClicks > 5){
-      this._snackBar.open("Calme toi ! T'as la clickonite ou quoi ? 🤪🤪🤪", undefined, {duration: 5000, panelClass: "snackbar"});
+    if(this.displaySouvenir) {
+      this.headClicks++;
+      if(this.headClicks > 5 && this.headClicks <= 10){
+        this._snackBar.open("Bien joué ! Tu as trouvé un Easter Egg ! (Tabasser Max)", undefined, {duration: 5000, panelClass: "snackbar"});
+        this.souvenirImage = "max-tabasse.png"
+      } else if (this.headClicks > 10) {
+        this._snackBar.open("Calme toi ! T'as la clickonite ou quoi ? 🤪🤪", undefined, {duration: 5000, panelClass: "snackbar"});
+      }
     }
   }
 
@@ -95,11 +99,11 @@ export class AppComponent implements OnInit {
   }
 
   foundEasterEgg() {
-    this._snackBar.open("Bien joué ! Tu as trouvé un Easter Egg !", undefined, {duration: 5000,}); // On code sale, on variabilise R !
+    this._snackBar.open("Bien joué ! Tu as trouvé un Easter Egg !", undefined, {duration: 5000, panelClass: "snackbar"}); // On code sale, on variabilise R !
   }
 
   showDragon() {
-    this.easterEggDragon = true;
+    this.souvenirImage = "max-the-dragon.png"
   }
 
   generateFireworks() {
